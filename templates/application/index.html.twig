@@ -1,0 +1,250 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ApplicationController!{% endblock %}
+
+{% block body %}
+<header>
+    <div>
+      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
+      <li>Abonnement</li>
+      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+      <li><a href="{{ path('app_contact')}}">Contact</a></li>
+      <li>
+      <button>Télécharger l'application</button></li>
+        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
+        </li>
+    </ul>
+  </header>
+
+<section id="main-app">
+    <article>
+        <h1>L'application  <strong>pour vélo et trottinettes 
+        qui donne à vos enfants la liberté dont  </strong>ils ont besoin !
+       </h1>
+    </article>
+    <article>
+        <img src={{asset('images/velo_application.png')}} >
+    </article>
+</section>
+
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+    <li id="carousel__slide1"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+
+       <article>
+            <img src={{asset('images/Golocalisation.gif')}} class="picto">
+        </article>
+        <article>
+            <div>
+                <img src={{asset('images/pictogrammes/localisation.png')}} class="picto">
+                <h2>Suivi de la géolocalisation</h2>
+            </div>
+            <div>
+                <hr>
+                <p>Localisez votre vélo ou votre trottinette 
+                et suivez ses positions toutes les 3, 5 et 10 
+                minutes, dès qu’il est en mouvement (selon 
+                configuration et réseau)
+                </p>
+            </div>
+        </article>
+        <a href="#carousel__slide4"
+           class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide2"
+           class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+
+
+    <li id="carousel__slide2"
+        tabindex="0"
+        class="carousel__slide2">
+
+      <div class="carousel__snapper">
+        <article>
+            <div>
+                <img src={{asset('images/pictogrammes/zone.png')}} class="picto">
+                <h2>Alerte d’entrée/sortie de zone</h2>
+            </div>
+            <div>
+                <hr>
+                <p>Définissez des zones virtuelles 
+                et soyez alerté lorsque votre vélo 
+                ou votre trottinette entre et/ou sort de cette zone
+                </p>
+            </div>
+        </article>
+        <article>
+            <img src={{asset('images/Zone.gif')}} class="picto">
+        </article>
+      
+      </div>
+
+      <a href="#carousel__slide1"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide3"
+         class="carousel__next">Go to next slide</a>
+    </li>
+
+
+
+
+    <li id="carousel__slide3"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+            <article>
+             <img src={{asset('images/Chute.gif')}} class="picto">
+            </article>
+            <article>
+                <div>
+                    <img src={{asset('images/pictogrammes/chute.png')}} class="picto">
+                    <h2>Détecteur de chute</h2>
+                </div>
+                <div>
+                    <hr>
+                    <p>Grâce a nos détecteur, nous sommes en mesure de 
+                    nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua. At vero eos
+                     et accusam et justo duo dolores et ea rebum. Stet 
+                     clita kasd gubergren, no sea takimata sanctus est 
+                     Lorem
+                    </p>
+                </div>
+            </article>
+      </div>
+      <a href="#carousel__slide2"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide4"
+         class="carousel__next">Go to next slide</a>
+    </li>
+
+
+
+    <li id="carousel__slide4"
+        tabindex="0"
+        class="carousel__slide2">
+       <div class="carousel__snapper">
+        <article>
+            <div>
+                <img src={{asset('images/pictogrammes/danger.png')}} class="picto">
+                <h2>Alerte danger</h2>
+            </div>
+            <div>
+                <hr>
+                <p>En cas de danger, un système d’alerte est présent …
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                sed diam nonumy eirmod tempor invidunt ut labore et
+                 dolore magna aliquyam
+                </p>
+            </div>
+        </article>
+        <article>
+            <img src={{asset('images/Danger.gif')}} class="picto">
+        </article>
+      
+      </div>
+      <a href="#carousel__slide3"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide1"
+         class="carousel__next">Go to next slide</a>
+    </li>
+  </ol>
+</section>
+
+<section id="trait">
+    <article>
+        <h4>Commander votre Leo !</h4>
+        <p>Lorem ipsum dolor sit amet, 
+        consetetur sadipscing elitr, 
+        sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. 
+        At vero eos et accusam et justo duo 
+        dolores et ea rebum. Stet clita kasd 
+        gubergren, no sea takimata sanctus 
+        est Lorem
+        <div>
+            <button>Télécharger</button>
+            <img src={{asset('images/image/button_Available_on_the_App_Store.png')}} alt="app_store" class="appstore">
+            <img src={{asset('images/image/google_play_logo.png')}} alt="app_store" class="appstore">
+        </div>
+    </article>
+    <article>
+        <img src={{asset('images/commande.png')}} >
+    </article>
+</section>
+
+<section id="abonnement">
+    <article>
+        <h4>Autonomie Record</h4>
+        <img src={{asset('images/pictogrammes/battery.png')}}>
+        <p>Ne vous retrouvez jamais sans batterie en cas de vol.
+        Jusqu'à 3 mois entre deux recharges grâce à sa conception 
+        optimisée</p>
+    </article>
+    <article>
+        <h4>Abonnement pour Tous</h4>
+        <img src={{asset('images/pictogrammes/addUser.png')}}>
+        <p>Nous proposons des abonnements variés pour 
+        satisfaire et répondre à tout vos besoins.</p>
+    </article>
+    <article>
+        <h4>Nouvelle technologie</h4>
+        <img src={{asset('images/pictogrammes/technologie.png')}}>
+        <p>Une technologie à la pointe, avec un système de gestion 
+        des chutes, de communications, tout en subtilité pour 
+        ne pas gêner votre enfant dans son aventure.</p>
+    </article>
+</section>
+
+<section id="more">
+    <article>
+        <h4>Vous souhaitez en faire plus ?</h4>
+        <p>Vous avez un avis, une demande ou quoi que ce 
+        soit, n’hésitez pas à nous en fait part. 
+        Nous prenons compte de tous les avis dans le but de 
+        toujours nous améliorer.</p>
+        <button>Nous Contacter</button>
+    </article>
+</section>
+
+<footer>
+    <article>
+        <div>
+            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
+        </div>
+        <ul>
+            <h4>Menu</h4>
+            <li>Comment ca marche</li>
+            <li>A propos de nous</li>
+            <li>Contact</li>
+        </ul>
+         <ul>
+            <h4>Menu</h4>
+            <li>Comment ca marche</li>
+            <li>A propos de nous</li>
+            <li>Contact</li>
+        </ul>
+         <ul>
+            <h4>Newsletters</h4>
+            <form>
+                <input type="text" placeholder="Insérer votre e-mail">
+                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore">
+            </form>
+        </ul>
+    </article>
+</footer>
+
+
+{% endblock %}

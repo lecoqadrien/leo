@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+
+<header>
+    <div>
+      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+    </div>
+  
+    <ul class="menu">
+      <li><a href="{{ path('app_application')}}">Tableau de bord</a></li>
+      <li>Abonnement</li>
+      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+      <li><a href="{{ path('app_contact')}}">Contact</a></li>
+      <li>
+      <button>Télécharger l'application</button></li>
+        <li><img src={{asset('images/pictogrammes/user.png')}} class="picto">
+        </li>
+    </ul>
+  </header>
+
+<ul>
+    <li><a href="{{path('home')}}">Marques</a></li>
+    <li><a href="{{path('app_product')}}">Produits</a></li>
+</ul>
+
+ <div id="map"></div>
+ 
+
+
+<footer>
+    <article>
+        <div>
+            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
+        </div>
+        <ul>
+            <h4>Menu</h4>
+            <li>Comment ca marche</li>
+            <li>A propos de nous</li>
+            <li>Contact</li>
+        </ul>
+         <ul>
+            <h4>Menu</h4>
+            <li>Comment ca marche</li>
+            <li>A propos de nous</li>
+            <li>Contact</li>
+        </ul>
+         <ul>
+            <h4>Newsletters</h4>
+            <form>
+                <input type="text" placeholder="Insérer votre e-mail">
+                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore">
+            </form>
+        </ul>
+    </article>
+</footer>
+
+<script>
+    function initMap(): void {
+  const myLatLng = { lat: -25.363, lng: 131.044 };
+
+  const map = new google.maps.Map(
+    document.getElementById("map") as HTMLElement,
+    {
+      zoom: 4,
+      center: myLatLng,
+    }
+  );
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+  });
+}
+
+declare global {
+  interface Window {
+    initMap: () => void;
+  }
+}
+window.initMap = initMap;
+export {};
+</script>
+{% endblock %}
+
+

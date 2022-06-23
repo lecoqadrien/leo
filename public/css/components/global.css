@@ -1,0 +1,16 @@
+.f1 {
+  float: left;
+  width: 35%;
+  background: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 15px;
+  position: relative;
+  height: 150px;
+}
+
+#map {
+  height: 180px;
+}
+
+/*# sourceMappingURL=global.css.map */

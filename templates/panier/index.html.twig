@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PanierController!{% endblock %}
+
+{% block body %}
+<header>
+    <div>
+      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
+      <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
+      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+      <li><a href="{{ path('app_contact')}}">Contact</a></li>
+      <li>
+      <button>Télécharger l'application</button></li>
+        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
+        </li>
+    </ul>
+  </header>
+
+
+<section id="panier">
+    
+</section>
+<div class="example-wrapper">
+    <h1>Panier</h1>
+
+    <table>
+        <tr>
+            <th>Produit</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+   <tbody>
+            {% for p in products %}
+                <tr>
+                    <td>{{p.nom}}</td>
+                    <td>{{p.prix}}</td>
+                    <td>
+                        <a href="{{path('produit_edit', {'id':p.id})}}">Editer</a>
+                        <a href="{{path('produit_delete', {'id':p.id})}}" >Supprimer</a>
+                    </td>
+                </tr>
+            
+            {% else %}
+                <tr>
+                    <td colspan="2">Il n'y aucun produits</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+</div>
+{% endblock %}

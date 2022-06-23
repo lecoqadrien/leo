@@ -1,0 +1,183 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+
+
+
+<header>
+    <div>
+      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
+      <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
+      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+      <li><a href="{{ path('app_contact')}}">Contact</a></li>
+      <li>
+      <button>Télécharger l'app</button></li>
+        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
+        </li>
+    </ul>
+  </header>
+
+<section id="main-image">
+    <article>
+        <h1>L'aventure  <strong>pour vos enfants</strong><br>L'assurance
+        <strong>pour les parents</strong></h1>
+        <p>Leo est un service de localisation intéractif. Il permet 
+        à vos enfants des les accompagner et de garder un oeil non intrusif
+        dans leurs premières libertés lorsqu'ils prennent le vélo ou la 
+        trottinette.
+        </p>
+        <button>Commander</button>
+    </article>
+    <article>
+        <img src={{asset('images/image/child2.png')}} >
+    </article>
+</section>
+
+<section id="fonctionnalites">
+    <article>
+        <img src={{asset('images/objet.png')}} >
+    </article>
+    <article>
+        <h1>Une idée novatrice et unique</h1>
+        <p>La sécurité et l'accompagnement sont 
+        primordiaux dans l'émancipation d'un enfant. Nous nous
+        efforçons de vous proposer un système flexible, intuitif et 
+        accessible.
+        </p>
+        <div>
+            <div class="f1">
+                <img src={{asset('images/pictogrammes/validate.png')}}><br>
+                <h2>Un système subtil</h2>
+                <p>Une balise complétmement discrète se fixe sur
+                votre moyen de transport </p>
+            </div>
+            <div class="f1">
+                <img src={{asset('images/pictogrammes/tele.png')}}><br>
+                <h2>Un accès partout</h2>
+                <p>Une application est un Dashboard 
+                accessible sur votre ordinateur vous 
+                apporter une vraie flexibilité</p>
+            </div>
+           <div class="f1">
+                <img src={{asset('images/pictogrammes/controle.png')}}><br>
+                <h2>Garder le contrôle</h2>
+                <p>Vous êtes libre de déterminer une zone
+                dans laquelle l'enfant peut s'amuser </p>
+            </div>
+            <div class="f1">
+                <img src={{asset('images/pictogrammes/interaction.png')}}> <br>
+                <h2>Une intéraction</h2>
+                <p>Vous pouvez communiquer
+                avec vos enfants via cette balise 
+                et vous serez averti en cas de problèmes. </p>
+            </div>
+        </div>
+        
+        <button>Commander</button>
+    </article>
+</section>
+
+<section id="application">
+
+    <section id="textApp" class="rellax" data-rellax-speed="6">
+        <h1>En route vers la liberté</h1>
+    </section>
+    <section>
+        <article>
+        <div class="bloc" data-aos="fade-right" class="rellax" data-rellax-speed="10">
+            <img src={{asset('images/pictogrammes/localisation.png')}}>
+            <h3>Géolocalisation</h3>
+        </div>
+        <div class="bloc" data-aos="fade-right">
+            <img src={{asset('images/pictogrammes/chute.png')}}>
+            <h3>Detection de chute</h3>
+        </div>
+        <div class="bloc" data-aos="fade-right">
+            <img src={{asset('images/pictogrammes/danger.png')}}>
+            <h3>Alert danger</h3>
+        </div>  
+    </article>
+    <article>
+        <img src={{asset('images/image/telephone.png')}} class="phone" data-speed="10"data-length="2m11s">
+    </article>
+    <article>
+        <div class="bloc" data-aos="fade-left">
+            <img src={{asset('images/pictogrammes/zone.png')}}>
+            <h3>Alerte zone</h3>
+        </div>
+        <div class="bloc" data-aos="fade-left">
+            <img src={{asset('images/pictogrammes/tips.png')}}>
+            <h3>Tips Actualité</h3>
+        </div>
+    </article>
+    </section>
+    
+</section>
+
+<section id="save">
+    <article>
+        <div class="savebike" data-aos="fade-right">
+            <h2>Télécharger notre application 
+            pour commencer l’aventure ! </h2>
+           
+            <p>Notre application se combine parfaitement 
+            avec notre système de Dashboard accessible depuis le site.<br>
+            Retrouvez nous sur l’App Store et Google Play.
+            Créez un compte ou connectez vous et c’est parti ! </p>
+
+            <button>Télécharger</button>
+            <img src={{asset('images/image/button_Available_on_the_App_Store.png')}} alt="app_store" class="appstore">
+            <img src={{asset('images/image/google_play_logo.png')}} alt="app_store" class="appstore">
+        </div>
+        <div data-aos="fade-left">
+            <img src={{asset('images/image/appli.png')}} alt="photo">
+        </div>
+    </article>
+    <article>
+         <h4>Vous souhaitez en faire plus ?</h4>
+        <p>LVous avez un avis, une demande ou
+        quoi que ce soit, n’hésitez pas à nous en fait part. 
+        Nous prenons compte de tous les avis dans le but
+        de toujours nous améliorer.</p>
+        <button>Nous Contacter</button>
+    </article>
+</section>
+
+<footer>
+    <article>
+        <div>
+            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
+        </div>
+        <ul>
+            <h4>Menu</h4>
+            <li>Notre application</li>
+            <li>Abonnement</li>
+            <li>La team Leo</li>
+            <li>Contact</li>
+        </ul>
+         <ul>
+            <h4>Télécharger l'application</h4>
+            <li> <img src={{asset('images/image/button_Available_on_the_App_Store.png')}} alt="app_store" class="appstore"></li>
+            <li><img src={{asset('images/image/google_play_logo.png')}} alt="app_store" class="appstore"></li>
+        </ul>
+         <ul>
+            <h4>Newsletters</h4>
+            <form>
+                <input type="text" placeholder="Insérer votre e-mail">
+                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore" onclick="bonjour()">
+            </form>
+        </ul>
+    </article>
+</footer>
+
+{% endblock %}

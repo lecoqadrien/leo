@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitsController!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+   <h1> Les produits </h1>
+   <table>
+        <thead>
+            <tr>
+                <th>Produits</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in produits %}
+                <tr>
+                    <td>{{p.nom}}</td>
+                    <td>
+                        <a href="{{path('produit_edit', {'id':p.id})}}">Editer</a>
+                        <a href="{{path('produit_edit', {'id':p.id})}}">Supprimer</a>
+                    </td>
+                </tr>
+            
+            {% else %}
+                <tr>
+                    <td colspan="2">Il n'y aucun produits</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+   </table>
+   <h2>Ajouter un produit</h2>
+  
+</div>
+{% endblock %}

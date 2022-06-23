@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AbonnementController!{% endblock %}
+
+{% block body %}
+
+
+<header>
+    <div>
+      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
+      <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
+      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+      <li><a href="{{ path('app_contact')}}">Contact</a></li>
+      <li>
+      <button>Télécharger l'application</button></li>
+        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
+        </li>
+    </ul>
+  </header>
+
+
+  <section id="row">
+  <div>
+      <h1>Nos <strong>Abonnements</strong></h1>
+  </div>
+  <div>
+      <article class="col-4 mt-4">
+            <h1>Abonnement Mensuel</h1>
+        {% for p in produits %}
+            <p>Économisez au fur et à mesure 
+            que vous ajoutez des Léo.</p>
+            <b>A partir de 5,99 euros</b>
+            <button>Commander</button>
+                <h2>{{ p.nom }}</h2>
+                <p>{{ p.prix }} €</p>
+      </article>
+        {% endfor %}
+     <article class="col-4 mt-4">
+            <h1>Abonnement Annuel</h1>
+        {% for p in produits %}
+            <p>Économisez au fur et à mesure 
+            que vous ajoutez des Léo.</p>
+            <b>A partir de 5,99 euros</b>
+            <a href="{{path("add_panier", {id: p.id})}}">Commander</a>
+                <h2>{{ p.nom }}</h2>
+                <p>{{ p.prix }} €</p>
+    </article>
+    {% endfor %}
+  </div>
+
+  
+    </section>
+
+
+{% endblock %}

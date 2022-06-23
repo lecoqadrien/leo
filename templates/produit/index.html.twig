@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitsController!{% endblock %}
+
+{% block body %}
+<header>
+    <div>
+      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
+      <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
+      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+      <li><a href="{{ path('app_contact')}}">Contact</a></li>
+      <li>
+      <button>Télécharger l'application</button></li>
+        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
+        </li>
+    </ul>
+  </header>
+  
+
+<div class="example-wrapper">
+   <h1> Les produits </h1>
+   <table>
+        <thead>
+            <tr>
+                <th>Produits</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in produits %}
+                <tr>
+                    <td>{{p.nom}}</td>
+                    <td>
+                        <a href="{{path('produit_edit', {'id':p.id})}}">Editer</a>
+                        <a href="{{path('produit_delete', {'id':p.id})}}" >Supprimer</a>
+                    </td>
+                </tr>
+            
+            {% else %}
+                <tr>
+                    <td colspan="2">Il n'y aucun produits</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+   </table>
+   <h2>Ajouter un produit</h2>
+   {{ form(ajout)}}
+  
+</div>
+{% endblock %}

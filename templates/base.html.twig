@@ -6,7 +6,24 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('images/styles.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- playground-hide -->
+    <script>
+      const process = { env: {} };
+      process.env.GOOGLE_MAPS_API_KEY =
+        "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
+    </script>
+    <!-- playground-hide-end -->
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+        
+
         {% endblock %}
 
         {% block javascripts %}
@@ -14,6 +31,18 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <script id="62b38e247234e274eb456849" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
+        <main>
+            {% block body %}{% endblock %}
+            <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+            <script src="{{asset('js/scripts.js')}}"></script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+              <script>
+            AOS.init();
+            </script>
+            <script id="62b38e247234e274eb456849" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+           
+       </main>
     </body>
 </html>

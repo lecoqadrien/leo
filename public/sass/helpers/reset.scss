@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100%;
+    background: url(../images/pictogrammes/motif6.png);
+    z-index: 1;
+    background-position: center;
+    background-position-y: 100px ;
+    background-repeat: no-repeat ;
+}
+body {
+    background-color: #F9E5CE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+    background: none;
+    margin: 0 auto;
+}
