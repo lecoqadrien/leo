@@ -1,34 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ApplicationController!{% endblock %}
+{% block title %}La Team Leo{% endblock %}
 
 {% block body %}
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'></div>
-  </label>
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
-      <li>Abonnement</li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'application</button></li>
-        <li><img src={{asset('images/pictogrammes/user.png')}} class="picto">
-        </li>
-    </ul>
-  </header>
-
-
-
 
 <section id="team">
     <div>
-        <h1>Notre <strong>team</strong></h1>
+        <h1>Notre <strong>équipe</strong></h1>
     </div>
     <div>
         <article>
@@ -88,37 +66,14 @@
 
     <article>
          <b><span>La </span>sécurité <span>de vos </span>enfants <span>est notre priorité </span></b>
-         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua !  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ! 
+         <p>Parce qu’accompagner son enfant est une étape primordiale dans l’émancipation de celui ci, nous sommes là pour vous aider dans cette étape importante. 
+            Suivez le en toute sécurité et de manière flexible dans ses premières libertés grâce à notre service innovant et complémentaire. 
+            Depuis chez vous, où même dans votre lieu de travail, les possibilités s’adaptent à toute condition. On plaisante pas avec la sécurité de vos petits aventuriers ! 
          </p>
     </article>
 </section>
 
-<footer>
-    <article>
-        <div>
-            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
-        </div>
-        <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Newsletters</h4>
-            <form>
-                <input type="text" placeholder="Insérer votre e-mail">
-                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore">
-            </form>
-        </ul>
-    </article>
-</footer>
+
 
 
 

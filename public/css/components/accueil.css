@@ -11,23 +11,22 @@
   justify-content: center;
   flex-direction: column;
   background: none;
+  margin-top: 150px;
 }
 #main-image article:nth-child(1) h1 {
-  font-size: 28px;
+  font-size: 34px;
   font-family: "RNS_Sanz", sans-serif;
   font-weight: bold;
   width: 100%;
   color: #F26513;
 }
 #main-image article:nth-child(1) h1 strong {
-  font-size: 28px;
-  width: 550px;
   color: #020C1E;
   font-family: "RNS_Sanz", sans-serif;
   font-weight: bold;
 }
 #main-image article:nth-child(1) p {
-  font-size: 16px;
+  font-size: 19px;
   width: 100%;
   color: #020C1E;
   margin-top: 20px;
@@ -35,20 +34,25 @@
   font-weight: normal;
 }
 #main-image article:nth-child(1) button {
-  font-size: 12px;
-  width: 150px;
-  height: 40px;
+  font-size: 22px;
+  width: 70%;
   color: white;
   background: #F26513;
-  padding: 10px;
+  padding: 20px;
   border: none;
   border-radius: 8px;
   color: white;
   cursor: pointer;
   float: left;
-  margin-top: 10px;
+  margin-top: 35px;
   font-family: "RNS_Sanz", sans-serif;
   font-weight: bold;
+}
+#main-image article:nth-child(1) button:hover {
+  text-decoration: none;
+  background: white;
+  border: 2px solid #F26513;
+  color: #F26513;
 }
 @media (max-width: 600px) {
   #main-image article:nth-child(1) {
@@ -56,6 +60,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: align-items;
+    margin-top: 291px;
   }
 }
 #main-image article:nth-child(2) {
@@ -64,6 +69,7 @@
   align-items: center;
   justify-content: center;
   background: none;
+  margin-top: 150px;
 }
 #main-image article:nth-child(2) img {
   max-width: 80%;
@@ -89,18 +95,22 @@
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
+  margin-top: 100px;
 }
 #fonctionnalites article:nth-child(1) {
   width: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 #fonctionnalites article:nth-child(1) img {
-  max-width: 70%;
+  max-width: 60%;
 }
 #fonctionnalites article:nth-child(2) {
   width: 50%;
   display: block;
+  background: none;
 }
 #fonctionnalites article:nth-child(2) h1 {
   float: left;
@@ -119,18 +129,22 @@
 #fonctionnalites article:nth-child(2) div {
   float: left;
   display: flex;
-  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   margin-top: 30px;
+  z-index: 0;
+  padding-left: 15px;
 }
 #fonctionnalites article:nth-child(2) div div {
   width: 37%;
   margin: 13px;
-  margin-top: 10px;
+  margin-top: 30px;
+  z-index: 0;
 }
 #fonctionnalites article:nth-child(2) div div img {
   float: left;
   position: absolute;
+  z-index: 0;
   top: -30px;
 }
 #fonctionnalites article:nth-child(2) div div h2 {
@@ -170,19 +184,26 @@
 #fonctionnalites article:nth-child(2) button {
   background: #F26513;
   display: block;
-  width: 100%;
+  width: 80%;
   height: 50px;
   font-size: 24px;
   border: none;
   border-radius: 8px;
   color: white;
   cursor: pointer;
-  margin: 0 auto;
-  margin-right: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
 }
 #fonctionnalites article:nth-child(2) button:hover {
   background: white;
   color: #FF8A1F;
+}
+#fonctionnalites article:nth-child(2) a {
+  text-decoration: none;
 }
 @media (max-width: 1024px) {
   #fonctionnalites article:nth-child(2) {
@@ -207,6 +228,7 @@
 #application {
   margin: 0 auto;
   width: 100%;
+  z-index: 0;
 }
 #application #textApp {
   position: relative;
@@ -228,6 +250,8 @@
   box-sizing: content-box;
   top: 650px;
   opacity: 0.3;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: extrabold;
 }
 @media (max-width: 1024px) {
   #application #textApp h1 {
@@ -241,7 +265,7 @@
   margin-top: 100px;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   #application section {
@@ -258,6 +282,7 @@
   background: none;
   position: relative;
   display: block;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(1) {
@@ -287,14 +312,18 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+  z-index: 0;
 }
 #application section article:nth-child(1) .bloc img {
   float: left;
+  z-index: 0;
 }
 #application section article:nth-child(1) .bloc h3 {
   float: left;
-  font-size: 14px;
+  font-size: 20px;
   margin-left: 14px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: extrabold;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(1) .bloc {
@@ -350,7 +379,7 @@
   background: none;
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 0;
 }
 #application section article:nth-child(2) .phone {
   margin: 0 auto;
@@ -358,17 +387,16 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(2) {
-    background: lightgreen;
     height: 50vh;
-    max-width: 30%;
+    max-width: 40%;
   }
 }
 @media (max-width: 600px) {
   #application section article:nth-child(2) {
-    background: lightgreen;
     height: 50vh;
     max-width: 60%;
   }
@@ -396,8 +424,10 @@
 }
 #application section article:nth-child(3) .bloc h3 {
   float: left;
-  font-size: 14px;
+  font-size: 24px;
   margin-left: 14px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(3) .bloc {
@@ -454,9 +484,15 @@
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+  z-index: 0;
 }
 #save .savebike {
   margin-left: 140px;
+}
+@media (max-width: 1024px) {
+  #save .savebike {
+    margin-left: 0px;
+  }
 }
 #save article:nth-child(1) {
   width: 100%;
@@ -467,6 +503,7 @@
   justify-content: space-evenly;
   margin-top: 150px;
   float: left;
+  z-index: 0;
 }
 #save article:nth-child(1) div:nth-child(1) {
   width: 40%;
@@ -475,43 +512,49 @@
 }
 #save article:nth-child(1) div:nth-child(1) h2 {
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #save article:nth-child(1) div:nth-child(1) p {
   float: left;
   margin-top: 15px;
   width: 100%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
 }
 #save article:nth-child(1) div:nth-child(1) button {
   width: 120px;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 25px;
   text-decoration: none;
   border: none;
   background: #F26513;
   border-radius: 5px;
   font-size: 16px;
   color: white;
-  margin-top: 10px;
   float: left;
   padding: 10px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+#save article:nth-child(1) div:nth-child(1) button:hover {
+  background: white;
+  color: #FF8A1F;
 }
 #save article:nth-child(1) div:nth-child(1) img {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-#save article:nth-child(1) div:nth-child(1) img:nth-child(1) {
-  margin-top: 20px;
-  float: left;
-  margin-left: 10px;
-}
-#save article:nth-child(1) div:nth-child(1) img:nth-child(2) {
-  margin-top: 20px;
-  float: left;
+  margin-top: 25px;
   margin-left: 10px;
 }
 @media (max-width: 600px) {
   #save article:nth-child(1) div:nth-child(1) {
     width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  #save article:nth-child(1) {
+    width: 100%;
+    margin-top: 164px;
   }
 }
 #save article:nth-child(1) div:nth-child(2) {
@@ -530,11 +573,11 @@
 }
 @media (max-width: 600px) {
   #save article:nth-child(1) {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 0px;
   }
 }
@@ -551,22 +594,43 @@
 #save article:nth-child(2) h4 {
   font-size: 45px;
   width: 40%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  #save article:nth-child(2) h4 {
+    width: 100%;
+  }
 }
 #save article:nth-child(2) p {
   width: 30%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
 }
-#save article:nth-child(2) button {
+@media (max-width: 600px) {
+  #save article:nth-child(2) p {
+    width: 100%;
+  }
+}
+#save article:nth-child(2) a {
+  text-decoration: none;
+}
+#save article:nth-child(2) a button {
   background: #F26513;
   display: block;
-  width: 40%;
+  width: 100%;
   height: 50px;
   font-size: 24px;
   border: none;
   border-radius: 8px;
   margin-left: 30px;
   color: white;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  cursor: pointer;
 }
-#save article:nth-child(2) button:hover {
+#save article:nth-child(2) a button:hover {
   background: white;
   color: #FF8A1F;
 }
@@ -583,8 +647,8 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: flex-end;
     margin-top: 0px;
+    height: 45vh;
   }
 }
 @media (max-width: 1024px) {
@@ -606,6 +670,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 220vh;
   }
 }
 

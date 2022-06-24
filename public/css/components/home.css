@@ -1,0 +1,15 @@
+#home ul {
+  position: relative;
+  top: 130px;
+}
+#home ul h1 {
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+#home img {
+  width: 30%;
+  margin-top: 150px;
+}
+
+/*# sourceMappingURL=home.css.map */

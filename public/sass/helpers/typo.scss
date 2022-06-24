@@ -1,48 +1,48 @@
 @font-face {
 	font-family: 'RNS_Sanz';
     font-weight: bolder;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Black.woff2') format('woff2'),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-Black.ttf') format('truetype')
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Black.woff2) format('woff2'),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-Black.ttf) format('truetype')
 }
 
 @font-face{
-    font-family: 'RNS';
+    font-family: 'RNS_Sanz';
     font-weight: bold ;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Bold.woff2') format('woff2'),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-Bold.ttf') format("truetype")
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Bold.woff2) format('woff2'),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-Bold.ttf) format("truetype")
 }
 
 @font-face {
     font-family: 'RNS_Sanz';
     font-weight: extrabold ;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-ExtraBold.woff2') format('woff2'),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-ExtraBold.ttf') format("truetype")
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-ExtraBold.woff2) format('woff2'),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-ExtraBold.ttf) format("truetype")
 }
 
 @font-face {
     font-family: 'RNS_Sanz';
     font-weight: lighter;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Light.woff2') format('woff2'),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-Light.ttf') format("truetype")
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Light.woff2) format('woff2'),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-Light.ttf) format("truetype")
 }
 
 @font-face {
     font-family: "RNS_Sanz";
     font-weight: medium;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Medium.woff2') format('woff2'),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-Medium.ttf'), format('truetype')
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Medium.woff2) format('woff2'),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-Medium.ttf), format('truetype')
 }
 
 @font-face {
     font-family: "RNS_Sanz";
     font-weight: normal;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Normal.woff2'), format("woff2"),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-Normal.ttf'), format('truetype')
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Normal.woff2), format("woff2"),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-Normal.ttf), format('truetype')
 }
 
 @font-face{
     font-family: "RNS_Sanz";
     font-weight: semibold;
-    src:    url('/public/typographie/RNS_Sanz-WOOF2/RNSSanz-SemiBold.woff2'), format("woff2"),
-            url('/public/typographie/RNS_Sanz-TTF/RNSSanz-SemiBold.ttf'), format("truetype")
+    src:    url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-SemiBold.woff2), format("woff2"),
+            url(../../typographie/RNS_Sanz-TTF/RNSSanz-SemiBold.ttf), format("truetype")
 }

@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  margin-top: 100px;
 }
 #main-app article {
   width: 40%;
@@ -16,41 +15,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 #main-app article:nth-child(1) h1 {
   font-size: 28px;
   width: 70%;
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #main-app article:nth-child(1) h1 strong {
   font-size: 28px;
   width: 550px;
   color: #020C1E;
-}
-#main-app article:nth-child(1) p {
-  font-size: 16px;
-  margin-left: 23px;
-  width: 400px;
-  color: #020C1E;
-}
-#main-app article:nth-child(1) button {
-  font-size: 12px;
-  margin-left: 23px;
-  width: 100px;
-  height: 40px;
-  color: white;
-  background: #F26513;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #main-app article:nth-child(2) {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 150px;
 }
 #main-app article:nth-child(2) img {
   max-width: 100%;
@@ -155,8 +141,10 @@ ol, li {
 .carousel .carousel__viewport .carousel__slide .carousel__snapper article:nth-child(2) div:nth-child(1) h2 {
   float: left;
   margin: 10px;
-  font-weight: 300;
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 .carousel .carousel__viewport .carousel__slide .carousel__snapper article:nth-child(2) div:nth-child(2) {
   width: 100%;
@@ -174,6 +162,9 @@ ol, li {
   width: 70%;
   float: left;
   margin-top: 30px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 22px;
 }
 .carousel .carousel__viewport .carousel__slide2 {
   position: relative;
@@ -225,8 +216,10 @@ ol, li {
 .carousel .carousel__viewport .carousel__slide2 .carousel__snapper article:nth-child(1) div:nth-child(1) h2 {
   float: left;
   margin: 10px;
-  font-weight: 300;
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 .carousel .carousel__viewport .carousel__slide2 .carousel__snapper article:nth-child(1) div:nth-child(2) {
   width: 100%;
@@ -244,6 +237,9 @@ ol, li {
   width: 70%;
   float: left;
   margin-top: 30px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 22px;
 }
 .carousel .carousel__viewport .carousel__slide2 article:nth-child(2) {
   width: 40%;
@@ -362,6 +358,7 @@ ol, li {
   background: url(../images/pictogrammes/traits2.png);
   display: flex;
   justify-content: center;
+  background-position-x: 100px;
 }
 #trait article:nth-child(1) {
   float: left;
@@ -371,13 +368,20 @@ ol, li {
   justify-content: center;
   background: none;
   margin-left: 200px;
+  margin-top: 50px;
 }
 #trait article:nth-child(1) h4 {
   font-size: 30px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
 }
 #trait article:nth-child(1) p {
   font-weight: 300;
   margin-top: 10px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 22px;
 }
 #trait article:nth-child(1) div {
   width: 100%;
@@ -395,6 +399,8 @@ ol, li {
   border-radius: 6px;
   cursor: pointer;
   float: left;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #trait article:nth-child(1) div button:hover {
   background: white;
@@ -422,6 +428,7 @@ ol, li {
   align-items: center;
   justify-content: center;
   margin-right: 100px;
+  margin-top: 50px;
 }
 #trait article:nth-child(2) img {
   width: 60%;
@@ -449,6 +456,13 @@ ol, li {
   }
 }
 
+#fond {
+  height: 200px;
+  background: url(../../images/pictogrammes/trait2.png);
+  background-repeat: no-repeat;
+  background-position-x: 200px;
+}
+
 #abonnement {
   width: 100%;
   height: 50vh;
@@ -456,7 +470,7 @@ ol, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 #abonnement article {
   width: 15%;
@@ -471,13 +485,14 @@ ol, li {
   padding: 25px;
   margin-top: 10px;
   box-shadow: 8px 8px 1px 4px #A9927B;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 #abonnement article h4 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 @media (max-width: 1024px) {
   #abonnement article h4 {
@@ -487,7 +502,7 @@ ol, li {
 }
 #abonnement article img {
   margin-top: 10px;
-  max-width: 100%;
+  max-width: 60%;
 }
 @media (max-width: 1024px) {
   #abonnement article img {
@@ -498,6 +513,9 @@ ol, li {
 #abonnement article p {
   text-align: center;
   margin-top: 20px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 15px;
 }
 @media (max-width: 1024px) {
   #abonnement article p {
@@ -526,7 +544,6 @@ ol, li {
   #abonnement {
     width: 80%;
     margin: 0 auto;
-    background: lightblue;
     flex-direction: column;
   }
 }
@@ -549,25 +566,34 @@ ol, li {
 #more article h4 {
   font-size: 40px;
   width: 30%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
-@media (max-width: 600px) {
+@media (max-width: 927px) {
   #more article h4 {
     text-align: center;
+    width: 100%;
   }
 }
 #more article p {
   width: 30%;
   float: left;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 18px;
 }
-@media (max-width: 600px) {
+@media (max-width: 927px) {
   #more article p {
     text-align: center;
+    width: 100%;
   }
 }
 #more article button {
   float: left;
   background: #F26513;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
   color: white;
   width: 30%;
   height: 50px;
@@ -575,11 +601,15 @@ ol, li {
   text-decoration: none;
   border: none;
 }
+@media (max-width: 927px) {
+  #more article button {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
 @media (max-width: 1024px) {
-  #more {
+  #more article {
     width: 80%;
-    margin: 0 auto;
-    background: lightblue;
     flex-direction: column;
     margin-top: 100px;
   }
@@ -588,10 +618,10 @@ ol, li {
   #more {
     width: 80%;
     margin: 0 auto;
-    background: lightblue;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 160px;
+    margin-bottom: 100px;
   }
 }
 

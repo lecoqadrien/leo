@@ -1,34 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ApplicationController!{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block body %}
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'></div>
-  </label>
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
-      <li>Abonnement</li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'application</button></li>
-        <li><img src={{asset('images/pictogrammes/user.png')}} class="picto">
-        </li>
-    </ul>
-  </header>
+
 
 
 
 
 <section id="contac">
-<h1>Contactez <strong>nous</strong></h1>
+           
+    {% for message in app.flashes('success') %}
+    <div class="flash-info">
+        {{ message }}
+    </div>
+    {% endfor %}
+
     <article>
+    <h1>Contactez <strong>nous</strong></h1>
        <div>
            {{form(ajoutContact)}}
        </div>
@@ -36,35 +25,6 @@
     
 </section>
 
-
-
-
-<footer>
-    <article>
-        <div>
-            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
-        </div>
-        <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Newsletters</h4>
-            <form>
-                <input type="text" placeholder="Insérer votre e-mail">
-                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore">
-            </form>
-        </ul>
-    </article>
-</footer>
 
 
 

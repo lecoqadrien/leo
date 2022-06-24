@@ -25,37 +25,37 @@ body {
 @font-face {
   font-family: "RNS_Sanz";
   font-weight: bolder;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Black.woff2") format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-Black.ttf") format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Black.woff2) format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-Black.ttf) format("truetype");
 }
 @font-face {
-  font-family: "RNS";
+  font-family: "RNS_Sanz";
   font-weight: bold;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Bold.woff2") format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-Bold.ttf") format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Bold.woff2) format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "RNS_Sanz";
   font-weight: extrabold;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-ExtraBold.woff2") format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-ExtraBold.ttf") format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-ExtraBold.woff2) format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-ExtraBold.ttf) format("truetype");
 }
 @font-face {
   font-family: "RNS_Sanz";
   font-weight: lighter;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Light.woff2") format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-Light.ttf") format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Light.woff2) format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "RNS_Sanz";
   font-weight: medium;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Medium.woff2") format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-Medium.ttf"), format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Medium.woff2) format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-Medium.ttf), format("truetype");
 }
 @font-face {
   font-family: "RNS_Sanz";
   font-weight: normal;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-Normal.woff2"), format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-Normal.ttf"), format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-Normal.woff2), format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-Normal.ttf), format("truetype");
 }
 @font-face {
   font-family: "RNS_Sanz";
   font-weight: semibold;
-  src: url("/public/typographie/RNS_Sanz-WOOF2/RNSSanz-SemiBold.woff2"), format("woff2"), url("/public/typographie/RNS_Sanz-TTF/RNSSanz-SemiBold.ttf"), format("truetype");
+  src: url(../../typographie/RNS_Sanz-WOOF2/RNSSanz-SemiBold.woff2), format("woff2"), url(../../typographie/RNS_Sanz-TTF/RNSSanz-SemiBold.ttf), format("truetype");
 }
 .f1 {
   float: left;
@@ -76,19 +76,44 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  padding: 1em;
-  width: 80%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  background: #F9E5CE;
   margin: 0 auto;
+  z-index: 1;
+  box-shadow: 0px 0px 15px 0px #E8CDAE;
+  filter: drop-shadow;
 }
 header div {
   width: 20%;
+  display: flex;
 }
 header div img {
-  max-width: 40%;
+  max-width: 80%;
+  text-align: right;
 }
-header button {
+header #board {
+  text-decoration: none;
+  background: white;
+  border: 1px solid #F26513;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  color: #F26513;
+}
+header #board:hover {
+  text-decoration: none;
+  background: white;
+  border: 2px solid #F26513;
+  color: #F26513;
+}
+header #downloadApp {
   text-decoration: none;
   background: #F26513;
   height: 30px;
@@ -98,7 +123,7 @@ header button {
   color: white;
   cursor: pointer;
 }
-header button:hover {
+header #downloadApp:hover {
   text-decoration: none;
   background: white;
   border: 2px solid #F26513;
@@ -108,7 +133,6 @@ header button:hover {
 .menu {
   display: flex;
   flex-direction: row;
-  display: flex;
   align-items: center;
   background: none;
 }
@@ -122,6 +146,9 @@ header button:hover {
   color: #020C1E;
   width: 15%;
   text-align: center;
+}
+.menu .picto {
+  width: 70%;
 }
 
 .menu > li {
@@ -193,6 +220,8 @@ header button:hover {
     width: 100%;
     justify-content: center;
     align-items: center;
+    background: white;
+    margin-top: 100px;
   }
 
   #menu-toggle ~ .menu li {
@@ -204,10 +233,14 @@ header button:hover {
   }
 
   #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
+    height: 5.2em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 
   .menu > li {
@@ -217,7 +250,8 @@ header button:hover {
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: white;
+    z-index: 1;
   }
 
   .menu > li:not(:last-child) {
@@ -313,23 +347,22 @@ footer article ul:nth-child(4) form img {
   justify-content: center;
   flex-direction: column;
   background: none;
+  margin-top: 150px;
 }
 #main-image article:nth-child(1) h1 {
-  font-size: 28px;
+  font-size: 34px;
   font-family: "RNS_Sanz", sans-serif;
   font-weight: bold;
   width: 100%;
   color: #F26513;
 }
 #main-image article:nth-child(1) h1 strong {
-  font-size: 28px;
-  width: 550px;
   color: #020C1E;
   font-family: "RNS_Sanz", sans-serif;
   font-weight: bold;
 }
 #main-image article:nth-child(1) p {
-  font-size: 16px;
+  font-size: 19px;
   width: 100%;
   color: #020C1E;
   margin-top: 20px;
@@ -337,20 +370,25 @@ footer article ul:nth-child(4) form img {
   font-weight: normal;
 }
 #main-image article:nth-child(1) button {
-  font-size: 12px;
-  width: 150px;
-  height: 40px;
+  font-size: 22px;
+  width: 70%;
   color: white;
   background: #F26513;
-  padding: 10px;
+  padding: 20px;
   border: none;
   border-radius: 8px;
   color: white;
   cursor: pointer;
   float: left;
-  margin-top: 10px;
+  margin-top: 35px;
   font-family: "RNS_Sanz", sans-serif;
   font-weight: bold;
+}
+#main-image article:nth-child(1) button:hover {
+  text-decoration: none;
+  background: white;
+  border: 2px solid #F26513;
+  color: #F26513;
 }
 @media (max-width: 600px) {
   #main-image article:nth-child(1) {
@@ -358,6 +396,7 @@ footer article ul:nth-child(4) form img {
     margin: 0 auto;
     display: flex;
     justify-content: align-items;
+    margin-top: 291px;
   }
 }
 #main-image article:nth-child(2) {
@@ -366,6 +405,7 @@ footer article ul:nth-child(4) form img {
   align-items: center;
   justify-content: center;
   background: none;
+  margin-top: 150px;
 }
 #main-image article:nth-child(2) img {
   max-width: 80%;
@@ -391,18 +431,22 @@ footer article ul:nth-child(4) form img {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
+  margin-top: 100px;
 }
 #fonctionnalites article:nth-child(1) {
   width: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 #fonctionnalites article:nth-child(1) img {
-  max-width: 70%;
+  max-width: 60%;
 }
 #fonctionnalites article:nth-child(2) {
   width: 50%;
   display: block;
+  background: none;
 }
 #fonctionnalites article:nth-child(2) h1 {
   float: left;
@@ -421,18 +465,22 @@ footer article ul:nth-child(4) form img {
 #fonctionnalites article:nth-child(2) div {
   float: left;
   display: flex;
-  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   margin-top: 30px;
+  z-index: 0;
+  padding-left: 15px;
 }
 #fonctionnalites article:nth-child(2) div div {
   width: 37%;
   margin: 13px;
-  margin-top: 10px;
+  margin-top: 30px;
+  z-index: 0;
 }
 #fonctionnalites article:nth-child(2) div div img {
   float: left;
   position: absolute;
+  z-index: 0;
   top: -30px;
 }
 #fonctionnalites article:nth-child(2) div div h2 {
@@ -472,19 +520,26 @@ footer article ul:nth-child(4) form img {
 #fonctionnalites article:nth-child(2) button {
   background: #F26513;
   display: block;
-  width: 100%;
+  width: 80%;
   height: 50px;
   font-size: 24px;
   border: none;
   border-radius: 8px;
   color: white;
   cursor: pointer;
-  margin: 0 auto;
-  margin-right: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
 }
 #fonctionnalites article:nth-child(2) button:hover {
   background: white;
   color: #FF8A1F;
+}
+#fonctionnalites article:nth-child(2) a {
+  text-decoration: none;
 }
 @media (max-width: 1024px) {
   #fonctionnalites article:nth-child(2) {
@@ -509,6 +564,7 @@ footer article ul:nth-child(4) form img {
 #application {
   margin: 0 auto;
   width: 100%;
+  z-index: 0;
 }
 #application #textApp {
   position: relative;
@@ -530,6 +586,8 @@ footer article ul:nth-child(4) form img {
   box-sizing: content-box;
   top: 650px;
   opacity: 0.3;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: extrabold;
 }
 @media (max-width: 1024px) {
   #application #textApp h1 {
@@ -543,7 +601,7 @@ footer article ul:nth-child(4) form img {
   margin-top: 100px;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   #application section {
@@ -560,6 +618,7 @@ footer article ul:nth-child(4) form img {
   background: none;
   position: relative;
   display: block;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(1) {
@@ -589,14 +648,18 @@ footer article ul:nth-child(4) form img {
   flex-direction: row;
   align-items: center;
   position: relative;
+  z-index: 0;
 }
 #application section article:nth-child(1) .bloc img {
   float: left;
+  z-index: 0;
 }
 #application section article:nth-child(1) .bloc h3 {
   float: left;
-  font-size: 14px;
+  font-size: 20px;
   margin-left: 14px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: extrabold;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(1) .bloc {
@@ -652,7 +715,7 @@ footer article ul:nth-child(4) form img {
   background: none;
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 0;
 }
 #application section article:nth-child(2) .phone {
   margin: 0 auto;
@@ -660,17 +723,16 @@ footer article ul:nth-child(4) form img {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(2) {
-    background: lightgreen;
     height: 50vh;
-    max-width: 30%;
+    max-width: 40%;
   }
 }
 @media (max-width: 600px) {
   #application section article:nth-child(2) {
-    background: lightgreen;
     height: 50vh;
     max-width: 60%;
   }
@@ -698,8 +760,10 @@ footer article ul:nth-child(4) form img {
 }
 #application section article:nth-child(3) .bloc h3 {
   float: left;
-  font-size: 14px;
+  font-size: 24px;
   margin-left: 14px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 @media (max-width: 1024px) {
   #application section article:nth-child(3) .bloc {
@@ -756,9 +820,15 @@ footer article ul:nth-child(4) form img {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+  z-index: 0;
 }
 #save .savebike {
   margin-left: 140px;
+}
+@media (max-width: 1024px) {
+  #save .savebike {
+    margin-left: 0px;
+  }
 }
 #save article:nth-child(1) {
   width: 100%;
@@ -769,6 +839,7 @@ footer article ul:nth-child(4) form img {
   justify-content: space-evenly;
   margin-top: 150px;
   float: left;
+  z-index: 0;
 }
 #save article:nth-child(1) div:nth-child(1) {
   width: 40%;
@@ -777,43 +848,49 @@ footer article ul:nth-child(4) form img {
 }
 #save article:nth-child(1) div:nth-child(1) h2 {
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #save article:nth-child(1) div:nth-child(1) p {
   float: left;
   margin-top: 15px;
   width: 100%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
 }
 #save article:nth-child(1) div:nth-child(1) button {
   width: 120px;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 25px;
   text-decoration: none;
   border: none;
   background: #F26513;
   border-radius: 5px;
   font-size: 16px;
   color: white;
-  margin-top: 10px;
   float: left;
   padding: 10px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+#save article:nth-child(1) div:nth-child(1) button:hover {
+  background: white;
+  color: #FF8A1F;
 }
 #save article:nth-child(1) div:nth-child(1) img {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-#save article:nth-child(1) div:nth-child(1) img:nth-child(1) {
-  margin-top: 20px;
-  float: left;
-  margin-left: 10px;
-}
-#save article:nth-child(1) div:nth-child(1) img:nth-child(2) {
-  margin-top: 20px;
-  float: left;
+  margin-top: 25px;
   margin-left: 10px;
 }
 @media (max-width: 600px) {
   #save article:nth-child(1) div:nth-child(1) {
     width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  #save article:nth-child(1) {
+    width: 100%;
+    margin-top: 164px;
   }
 }
 #save article:nth-child(1) div:nth-child(2) {
@@ -832,11 +909,11 @@ footer article ul:nth-child(4) form img {
 }
 @media (max-width: 600px) {
   #save article:nth-child(1) {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 0px;
   }
 }
@@ -853,22 +930,43 @@ footer article ul:nth-child(4) form img {
 #save article:nth-child(2) h4 {
   font-size: 45px;
   width: 40%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  #save article:nth-child(2) h4 {
+    width: 100%;
+  }
 }
 #save article:nth-child(2) p {
   width: 30%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
 }
-#save article:nth-child(2) button {
+@media (max-width: 600px) {
+  #save article:nth-child(2) p {
+    width: 100%;
+  }
+}
+#save article:nth-child(2) a {
+  text-decoration: none;
+}
+#save article:nth-child(2) a button {
   background: #F26513;
   display: block;
-  width: 40%;
+  width: 100%;
   height: 50px;
   font-size: 24px;
   border: none;
   border-radius: 8px;
   margin-left: 30px;
   color: white;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  cursor: pointer;
 }
-#save article:nth-child(2) button:hover {
+#save article:nth-child(2) a button:hover {
   background: white;
   color: #FF8A1F;
 }
@@ -885,8 +983,8 @@ footer article ul:nth-child(4) form img {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: flex-end;
     margin-top: 0px;
+    height: 45vh;
   }
 }
 @media (max-width: 1024px) {
@@ -908,6 +1006,7 @@ footer article ul:nth-child(4) form img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 220vh;
   }
 }
 
@@ -917,7 +1016,6 @@ footer article ul:nth-child(4) form img {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  margin-top: 100px;
 }
 #main-app article {
   width: 40%;
@@ -929,41 +1027,28 @@ footer article ul:nth-child(4) form img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 #main-app article:nth-child(1) h1 {
   font-size: 28px;
   width: 70%;
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #main-app article:nth-child(1) h1 strong {
   font-size: 28px;
   width: 550px;
   color: #020C1E;
-}
-#main-app article:nth-child(1) p {
-  font-size: 16px;
-  margin-left: 23px;
-  width: 400px;
-  color: #020C1E;
-}
-#main-app article:nth-child(1) button {
-  font-size: 12px;
-  margin-left: 23px;
-  width: 100px;
-  height: 40px;
-  color: white;
-  background: #F26513;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #main-app article:nth-child(2) {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 150px;
 }
 #main-app article:nth-child(2) img {
   max-width: 100%;
@@ -1068,8 +1153,10 @@ ol, li {
 .carousel .carousel__viewport .carousel__slide .carousel__snapper article:nth-child(2) div:nth-child(1) h2 {
   float: left;
   margin: 10px;
-  font-weight: 300;
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 .carousel .carousel__viewport .carousel__slide .carousel__snapper article:nth-child(2) div:nth-child(2) {
   width: 100%;
@@ -1087,6 +1174,9 @@ ol, li {
   width: 70%;
   float: left;
   margin-top: 30px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 22px;
 }
 .carousel .carousel__viewport .carousel__slide2 {
   position: relative;
@@ -1138,8 +1228,10 @@ ol, li {
 .carousel .carousel__viewport .carousel__slide2 .carousel__snapper article:nth-child(1) div:nth-child(1) h2 {
   float: left;
   margin: 10px;
-  font-weight: 300;
   color: #F26513;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 .carousel .carousel__viewport .carousel__slide2 .carousel__snapper article:nth-child(1) div:nth-child(2) {
   width: 100%;
@@ -1157,6 +1249,9 @@ ol, li {
   width: 70%;
   float: left;
   margin-top: 30px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 22px;
 }
 .carousel .carousel__viewport .carousel__slide2 article:nth-child(2) {
   width: 40%;
@@ -1275,6 +1370,7 @@ ol, li {
   background: url(../images/pictogrammes/traits2.png);
   display: flex;
   justify-content: center;
+  background-position-x: 100px;
 }
 #trait article:nth-child(1) {
   float: left;
@@ -1284,13 +1380,20 @@ ol, li {
   justify-content: center;
   background: none;
   margin-left: 200px;
+  margin-top: 50px;
 }
 #trait article:nth-child(1) h4 {
   font-size: 30px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
 }
 #trait article:nth-child(1) p {
   font-weight: 300;
   margin-top: 10px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 22px;
 }
 #trait article:nth-child(1) div {
   width: 100%;
@@ -1308,6 +1411,8 @@ ol, li {
   border-radius: 6px;
   cursor: pointer;
   float: left;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #trait article:nth-child(1) div button:hover {
   background: white;
@@ -1335,6 +1440,7 @@ ol, li {
   align-items: center;
   justify-content: center;
   margin-right: 100px;
+  margin-top: 50px;
 }
 #trait article:nth-child(2) img {
   width: 60%;
@@ -1362,6 +1468,13 @@ ol, li {
   }
 }
 
+#fond {
+  height: 200px;
+  background: url(../../images/pictogrammes/trait2.png);
+  background-repeat: no-repeat;
+  background-position-x: 200px;
+}
+
 #abonnement {
   width: 100%;
   height: 50vh;
@@ -1369,7 +1482,7 @@ ol, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 #abonnement article {
   width: 15%;
@@ -1384,13 +1497,14 @@ ol, li {
   padding: 25px;
   margin-top: 10px;
   box-shadow: 8px 8px 1px 4px #A9927B;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 #abonnement article h4 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 @media (max-width: 1024px) {
   #abonnement article h4 {
@@ -1400,7 +1514,7 @@ ol, li {
 }
 #abonnement article img {
   margin-top: 10px;
-  max-width: 100%;
+  max-width: 60%;
 }
 @media (max-width: 1024px) {
   #abonnement article img {
@@ -1411,6 +1525,9 @@ ol, li {
 #abonnement article p {
   text-align: center;
   margin-top: 20px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 15px;
 }
 @media (max-width: 1024px) {
   #abonnement article p {
@@ -1439,7 +1556,6 @@ ol, li {
   #abonnement {
     width: 80%;
     margin: 0 auto;
-    background: lightblue;
     flex-direction: column;
   }
 }
@@ -1462,25 +1578,34 @@ ol, li {
 #more article h4 {
   font-size: 40px;
   width: 30%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
-@media (max-width: 600px) {
+@media (max-width: 927px) {
   #more article h4 {
     text-align: center;
+    width: 100%;
   }
 }
 #more article p {
   width: 30%;
   float: left;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: medium;
+  font-size: 18px;
 }
-@media (max-width: 600px) {
+@media (max-width: 927px) {
   #more article p {
     text-align: center;
+    width: 100%;
   }
 }
 #more article button {
   float: left;
   background: #F26513;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
   color: white;
   width: 30%;
   height: 50px;
@@ -1488,11 +1613,15 @@ ol, li {
   text-decoration: none;
   border: none;
 }
+@media (max-width: 927px) {
+  #more article button {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
 @media (max-width: 1024px) {
-  #more {
+  #more article {
     width: 80%;
-    margin: 0 auto;
-    background: lightblue;
     flex-direction: column;
     margin-top: 100px;
   }
@@ -1501,10 +1630,10 @@ ol, li {
   #more {
     width: 80%;
     margin: 0 auto;
-    background: lightblue;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 160px;
+    margin-bottom: 100px;
   }
 }
 
@@ -1513,7 +1642,6 @@ ol, li {
   width: 80%;
   background: none;
   margin: 0 auto;
-  margin-top: 70px;
   height: 100vh;
 }
 #team div:nth-child(1) {
@@ -1528,6 +1656,14 @@ ol, li {
   text-align: center;
   margin: 0 auto;
   width: 80%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+}
+@media (max-width: 650px) {
+  #team div:nth-child(1) h1 {
+    position: relative;
+    top: 140px;
+  }
 }
 #team div:nth-child(1) h1 strong {
   font-size: 28px;
@@ -1539,6 +1675,7 @@ ol, li {
   height: 100vh;
   width: 100%;
   background: none;
+  margin-top: 100px;
 }
 #team div:nth-child(2) article {
   display: block;
@@ -1550,7 +1687,6 @@ ol, li {
 #team div:nth-child(2) article div {
   width: 60%;
   height: 260px;
-  padding: 15px;
   background: #F7F7F7;
   display: flex;
   align-content: flex-end;
@@ -1570,16 +1706,22 @@ ol, li {
   box-shadow: 1px 6px 0px 1px #A9927B;
   height: 20px;
   margin-top: 140px;
+  padding: 15px;
 }
 #team div:nth-child(2) article div div h5 {
   text-align: center;
   color: #F26513;
-  font-weight: 200;
+  font-size: 12px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: normal;
 }
 #team div:nth-child(2) article div div h6 {
   text-align: center;
   color: #A9927B;
-  font-weight: 500;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 12px;
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article div {
@@ -1596,8 +1738,10 @@ ol, li {
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .adrien {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
+    margin-top: 1000px;
   }
 }
 #team div:nth-child(2) article .naike {
@@ -1607,7 +1751,8 @@ ol, li {
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .naike {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
     background-position-y: -100px;
   }
@@ -1619,7 +1764,8 @@ ol, li {
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .kevin {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -1630,7 +1776,8 @@ ol, li {
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .ludovic {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -1641,7 +1788,8 @@ ol, li {
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .celia {
-    width: 100%;
+    width: 76%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -1652,7 +1800,8 @@ ol, li {
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .alexis {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -1745,20 +1894,24 @@ ol, li {
 @media (max-width: 650px) {
   #securite article:nth-child(1) img {
     margin-right: 0px;
+    margin-top: 1000px;
   }
 }
 #securite article:nth-child(2) {
   width: 50%;
-  margin-right: 40px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 #securite article:nth-child(2) b {
   font-size: 28px;
-  width: 350px;
+  width: 70%;
   color: #F26513;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #securite article:nth-child(2) b span {
   font-size: 28px;
@@ -1771,7 +1924,13 @@ ol, li {
   }
 }
 #securite article:nth-child(2) p {
-  width: 60%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: normal;
 }
 @media (max-width: 650px) {
   #securite article:nth-child(2) {
@@ -1791,14 +1950,11 @@ ol, li {
 
 #contac {
   width: 80%;
-  background: none;
   margin: 0 auto;
-  margin-top: 100px;
   display: block;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 70px;
 }
 #contac h1 {
   font-size: 28px;
@@ -1816,8 +1972,10 @@ ol, li {
 }
 #contac article {
   width: 100%;
+  margin-top: 100px;
   background: none;
   float: left;
+  margin-top: 150px;
 }
 #contac article div {
   width: 100%;
@@ -1859,13 +2017,12 @@ ol, li {
   height: 120px;
 }
 #contac article div form #contact div:nth-child(5n) input {
-  width: 95%;
+  width: 100%;
   padding: 9px;
   box-shadow: 10px 5px 5px #A9927B;
   border: none;
   height: 200px;
   text-decoration: none;
-  margin-right: 34px;
 }
 #contac article div form #contact div:nth-child(6) {
   display: flex;
@@ -1878,7 +2035,7 @@ ol, li {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 40%;
   background: #F26513;
   padding: 15px;
   border-radius: 10px;
@@ -1965,20 +2122,20 @@ ol, li {
 #row {
   width: 80%;
   height: 70vh;
-  background: lightblue;
+  background: none;
   display: block;
   margin: 0 auto;
 }
 #row div:nth-child(1) {
   width: 100%;
   height: 20vh;
-  background: lightgreen;
+  background: none;
   float: left;
 }
 #row div:nth-child(2) {
   width: 100%;
   height: 50vh;
-  background: lightgreen;
+  background: none;
   float: left;
   display: flex;
   align-items: center;
@@ -1987,7 +2144,7 @@ ol, li {
 #row div:nth-child(3) {
   width: 100%;
   height: 100%;
-  background: lightblue;
+  background: none;
   float: left;
   display: flex;
   align-items: center;
@@ -2001,6 +2158,8 @@ ol, li {
   text-align: center;
   margin: 0 auto;
   width: 80%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #row h1 strong {
   font-size: 28px;
@@ -2018,7 +2177,8 @@ ol, li {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  box-shadow: 8px 8px 1px 4px #A9927B;
 }
 #row article button {
   width: 50%;
@@ -2028,6 +2188,8 @@ ol, li {
   color: white;
   border: none;
   cursor: pointer;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #row article button:hover {
   background: white;
@@ -2035,11 +2197,38 @@ ol, li {
   color: #F26513;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  #row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: align-items;
+    flex-direction: column;
+  }
+}
 
 #panier {
-  width: 100%;
+  width: 80%;
   height: 50vh;
-  background: lightblue;
+  margin: 0 auto;
+}
+#panier article {
+  width: 100%;
+  height: 100%;
+}
+
+#home ul {
+  position: relative;
+  top: 130px;
+}
+#home ul h1 {
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+#home img {
+  width: 30%;
+  margin-top: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */

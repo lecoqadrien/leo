@@ -2,19 +2,44 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  padding: 1em;
-  width: 80%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  background: #F9E5CE;
   margin: 0 auto;
+  z-index: 1;
+  box-shadow: 0px 0px 15px 0px #E8CDAE;
+  filter: drop-shadow;
 }
 header div {
   width: 20%;
+  display: flex;
 }
 header div img {
-  max-width: 40%;
+  max-width: 80%;
+  text-align: right;
 }
-header button {
+header #board {
+  text-decoration: none;
+  background: white;
+  border: 1px solid #F26513;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  color: #F26513;
+}
+header #board:hover {
+  text-decoration: none;
+  background: white;
+  border: 2px solid #F26513;
+  color: #F26513;
+}
+header #downloadApp {
   text-decoration: none;
   background: #F26513;
   height: 30px;
@@ -24,7 +49,7 @@ header button {
   color: white;
   cursor: pointer;
 }
-header button:hover {
+header #downloadApp:hover {
   text-decoration: none;
   background: white;
   border: 2px solid #F26513;
@@ -34,7 +59,6 @@ header button:hover {
 .menu {
   display: flex;
   flex-direction: row;
-  display: flex;
   align-items: center;
   background: none;
 }
@@ -48,6 +72,9 @@ header button:hover {
   color: #020C1E;
   width: 15%;
   text-align: center;
+}
+.menu .picto {
+  width: 70%;
 }
 
 .menu > li {
@@ -119,6 +146,8 @@ header button:hover {
     width: 100%;
     justify-content: center;
     align-items: center;
+    background: white;
+    margin-top: 100px;
   }
 
   #menu-toggle ~ .menu li {
@@ -130,10 +159,14 @@ header button:hover {
   }
 
   #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
+    height: 5.2em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 
   .menu > li {
@@ -143,7 +176,8 @@ header button:hover {
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: white;
+    z-index: 1;
   }
 
   .menu > li:not(:last-child) {

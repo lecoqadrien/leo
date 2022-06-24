@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AbonnementController!{% endblock %}
+{% block title %}Abonnement{% endblock %}
 
 {% block body %}
 
@@ -47,7 +47,7 @@
         {% for p in produits %}
             <p>Économisez au fur et à mesure 
             que vous ajoutez des Léo.</p>
-            <b>A partir de 5,99 euros</b>
+            <b>A partir de 60,99 euros</b>
             <a href="{{path("add_panier", {id: p.id})}}">Commander</a>
                 <h2>{{ p.nom }}</h2>
                 <p>{{ p.prix }} €</p>

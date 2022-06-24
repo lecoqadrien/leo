@@ -1,31 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}S'inscrire{% endblock %}
 
 {% block body %}
-
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'></div>
-  </label>
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
-      <li>Abonnement</li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'application</button></li>
-        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
-        </li>
-    </ul>
-  </header>
-
-
-
 
     <section id="register">
         <h1>Inscription <strong>Connexion</strong></h1>
@@ -48,7 +25,7 @@
 
         <ul>
             <a href="{{ path('app_team')}}">Mot de passe oublié</a>
-            <a href="{{ path('app_login')}}">Crée un compte</a>
+            <a href="{{ path('app_login')}}">Se connecter</a>
         </ul>
     </section>
 

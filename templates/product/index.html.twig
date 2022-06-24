@@ -3,25 +3,7 @@
 {% block title %}Hello ProduitsController!{% endblock %}
 
 {% block body %}
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'></div>
-  </label>
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
-      <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'application</button></li>
-        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
-        </li>
-    </ul>
-  </header>
+
   
 
 <div class="example-wrapper">

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Accueil!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -18,6 +18,7 @@
       process.env.GOOGLE_MAPS_API_KEY =
         "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
     </script>
+    
     <!-- playground-hide-end -->
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
@@ -33,7 +34,72 @@
     <body>
         <script id="62b38e247234e274eb456849" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
         <main>
-            {% block body %}{% endblock %}
+
+        {% block header %}
+                <header>
+                    <div>
+                        <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+                    </div>
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+                    </label>
+                <ul class="menu">
+                    <li><a href="{{ path('app_application')}}">Notre Application</a></li>
+                    <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
+                    <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
+                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+                    <li>
+                        <a href="{{ path('register')}}"><button id="board">Tableau de bord</button></a>
+                    </li>
+                    <li>
+                        <button id="downloadApp">Télécharger l'application</button>
+                    </li>
+                        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
+                        </li>
+                </ul>
+                </header>
+            {% endblock %}
+
+            {% block body %}
+            
+                <div id="fb-root"></div>
+                <!-- Your Chat Plugin code -->
+                <div id="fb-customer-chat" class="fb-customerchat">
+                </div>
+
+                
+            {% endblock %}
+
+            
+            {% block footer %}
+                <footer>
+                    <article>
+                        <div>
+                            <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
+                        </div>
+                        <ul>
+                            <h4>Menu</h4>
+                            <li>Notre application</li>
+                            <li>Abonnement</li>
+                            <li>La team Leo</li>
+                            <li>Contact</li>
+                        </ul>
+                        <ul>
+                            <h4>Télécharger l'application</h4>
+                            <li> <img src={{asset('images/image/button_Available_on_the_App_Store.png')}} alt="app_store" class="appstore"></li>
+                            <li><img src={{asset('images/image/google_play_logo.png')}} alt="app_store" class="appstore"></li>
+                        </ul>
+                        <ul>
+                            <h4>Newsletters</h4>
+                            <form>
+                                <input type="text" placeholder="Insérer votre e-mail">
+                                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore" onclick="bonjour()">
+                            </form>
+                        </ul>
+                    </article>
+                </footer>
+            {% endblock %}
             <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
             <script src="{{asset('js/scripts.js')}}"></script>
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -42,7 +108,32 @@
             </script>
             <script id="62b38e247234e274eb456849" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
             <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+            <script>
+                var chatbox = document.getElementById('fb-customer-chat');
+                chatbox.setAttribute("page_id", "PAGE-ID");
+                chatbox.setAttribute("attribution", "biz_inbox");
+                </script>
+
+                <!-- Your SDK code -->
+                <script>
+                window.fbAsyncInit = function() {
+                    FB.init({
+                    xfbml            : true,
+                    version          : 'API-VERSION'
+                    });
+                };
+
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+                </script>
            
        </main>
+
+
     </body>
 </html>

@@ -1,7 +1,11 @@
 #panier {
-  width: 100%;
+  width: 80%;
   height: 50vh;
-  background: lightblue;
+  margin: 0 auto;
+}
+#panier article {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=panier.css.map */

@@ -1,31 +1,9 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-
-
-
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'></div>
-  </label>
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
-      <li><a href="{{ path('app_abonnement')}}">Abonnement</a></li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'app</button></li>
-        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
-        </li>
-    </ul>
-  </header>
 
 <section id="main-image">
     <article>
@@ -36,7 +14,7 @@
         dans leurs premières libertés lorsqu'ils prennent le vélo ou la 
         trottinette.
         </p>
-        <button>Commander</button>
+        <a href="{{ path('app_abonnement')}}"><button>Commander</button></a>
     </article>
     <article>
         <img src={{asset('images/image/child2.png')}} >
@@ -83,7 +61,7 @@
             </div>
         </div>
         
-        <button>Commander</button>
+        <a href="{{ path('app_abonnement')}}"><button>Commander</button></a>
     </article>
 </section>
 
@@ -100,7 +78,7 @@
         </div>
         <div class="bloc" data-aos="fade-right">
             <img src={{asset('images/pictogrammes/chute.png')}}>
-            <h3>Detection de chute</h3>
+            <h3>Détection de chute</h3>
         </div>
         <div class="bloc" data-aos="fade-right">
             <img src={{asset('images/pictogrammes/danger.png')}}>
@@ -145,39 +123,14 @@
     </article>
     <article>
          <h4>Vous souhaitez en faire plus ?</h4>
-        <p>LVous avez un avis, une demande ou
+        <p>Vous avez un avis, une demande ou
         quoi que ce soit, n’hésitez pas à nous en fait part. 
         Nous prenons compte de tous les avis dans le but
         de toujours nous améliorer.</p>
-        <button>Nous Contacter</button>
+        <a href="{{ path('app_contact')}}"><button>Nous contacter</button></a>
     </article>
 </section>
 
-<footer>
-    <article>
-        <div>
-            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
-        </div>
-        <ul>
-            <h4>Menu</h4>
-            <li>Notre application</li>
-            <li>Abonnement</li>
-            <li>La team Leo</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Télécharger l'application</h4>
-            <li> <img src={{asset('images/image/button_Available_on_the_App_Store.png')}} alt="app_store" class="appstore"></li>
-            <li><img src={{asset('images/image/google_play_logo.png')}} alt="app_store" class="appstore"></li>
-        </ul>
-         <ul>
-            <h4>Newsletters</h4>
-            <form>
-                <input type="text" placeholder="Insérer votre e-mail">
-                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore" onclick="bonjour()">
-            </form>
-        </ul>
-    </article>
-</footer>
+
 
 {% endblock %}

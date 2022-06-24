@@ -3,7 +3,6 @@
   width: 80%;
   background: none;
   margin: 0 auto;
-  margin-top: 70px;
   height: 100vh;
 }
 #team div:nth-child(1) {
@@ -18,6 +17,14 @@
   text-align: center;
   margin: 0 auto;
   width: 80%;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
+}
+@media (max-width: 650px) {
+  #team div:nth-child(1) h1 {
+    position: relative;
+    top: 140px;
+  }
 }
 #team div:nth-child(1) h1 strong {
   font-size: 28px;
@@ -29,6 +36,7 @@
   height: 100vh;
   width: 100%;
   background: none;
+  margin-top: 100px;
 }
 #team div:nth-child(2) article {
   display: block;
@@ -40,7 +48,6 @@
 #team div:nth-child(2) article div {
   width: 60%;
   height: 260px;
-  padding: 15px;
   background: #F7F7F7;
   display: flex;
   align-content: flex-end;
@@ -60,16 +67,22 @@
   box-shadow: 1px 6px 0px 1px #A9927B;
   height: 20px;
   margin-top: 140px;
+  padding: 15px;
 }
 #team div:nth-child(2) article div div h5 {
   text-align: center;
   color: #F26513;
-  font-weight: 200;
+  font-size: 12px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: normal;
 }
 #team div:nth-child(2) article div div h6 {
   text-align: center;
   color: #A9927B;
-  font-weight: 500;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 12px;
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article div {
@@ -86,8 +99,10 @@
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .adrien {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
+    margin-top: 1000px;
   }
 }
 #team div:nth-child(2) article .naike {
@@ -97,7 +112,8 @@
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .naike {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
     background-position-y: -100px;
   }
@@ -109,7 +125,8 @@
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .kevin {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -120,7 +137,8 @@
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .ludovic {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -131,7 +149,8 @@
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .celia {
-    width: 100%;
+    width: 76%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -142,7 +161,8 @@
 }
 @media (max-width: 650px) {
   #team div:nth-child(2) article .alexis {
-    width: 100%;
+    width: 80%;
+    height: 300px;
     background-size: cover;
   }
 }
@@ -235,20 +255,24 @@
 @media (max-width: 650px) {
   #securite article:nth-child(1) img {
     margin-right: 0px;
+    margin-top: 1000px;
   }
 }
 #securite article:nth-child(2) {
   width: 50%;
-  margin-right: 40px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 #securite article:nth-child(2) b {
   font-size: 28px;
-  width: 350px;
+  width: 70%;
   color: #F26513;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: bold;
 }
 #securite article:nth-child(2) b span {
   font-size: 28px;
@@ -261,7 +285,13 @@
   }
 }
 #securite article:nth-child(2) p {
-  width: 60%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-family: "RNS_Sanz", sans-serif;
+  font-weight: normal;
 }
 @media (max-width: 650px) {
   #securite article:nth-child(2) {

@@ -1,62 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Tableau de bord{% endblock %}
 
 {% block body %}
 
-
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-  
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Tableau de bord</a></li>
-      <li>Abonnement</li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'application</button></li>
-        <li><img src={{asset('images/pictogrammes/user.png')}} class="picto">
-        </li>
-    </ul>
-  </header>
-
-<ul>
+<section id="home">
+  <ul>
     <li><a href="{{path('home')}}">Marques</a></li>
     <li><a href="{{path('app_product')}}">Produits</a></li>
+    <h1>Tableau de bord</h1>
+    <h2>Bienvenue</h2>
 </ul>
 
+<img src={{asset('images/plan.png')}} >
+
+</section>
+
+
+
+
  <div id="map"></div>
+
  
 
 
-<footer>
-    <article>
-        <div>
-            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
-        </div>
-        <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Newsletters</h4>
-            <form>
-                <input type="text" placeholder="Insérer votre e-mail">
-                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore">
-            </form>
-        </ul>
-    </article>
-</footer>
 
 <script>
     function initMap(): void {

@@ -1,27 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ApplicationController!{% endblock %}
+{% block title %}Notre Application{% endblock %}
 
 {% block body %}
-<header>
-    <div>
-      <a href="{{ path('app_accueil')}}"><img src={{asset('images/logo.png')}} class="logo"></a>
-    </div>
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'></div>
-  </label>
-    <ul class="menu">
-      <li><a href="{{ path('app_application')}}">Notre Application</a></li>
-      <li>Abonnement</li>
-      <li><a href="{{ path('app_team')}}">La Team Leo</a></li>
-      <li><a href="{{ path('app_contact')}}">Contact</a></li>
-      <li>
-      <button>Télécharger l'application</button></li>
-        <li><a href="{{ path('register')}}"><img src={{asset('images/pictogrammes/user.png')}} class="picto"></a>
-        </li>
-    </ul>
-  </header>
 
 <section id="main-app">
     <article>
@@ -165,15 +146,9 @@
 <section id="trait">
     <article>
         <h4>Commander votre Leo !</h4>
-        <p>Lorem ipsum dolor sit amet, 
-        consetetur sadipscing elitr, 
-        sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. 
-        At vero eos et accusam et justo duo 
-        dolores et ea rebum. Stet clita kasd 
-        gubergren, no sea takimata sanctus 
-        est Lorem
+        <p>Commandez autant de Leo que vous avez besoin pour vos enfants. 
+        Vous pouvez tous les configurez rapidement sur la même application et 
+        avoir toutes les informations de vos protégés d’un simple coup d’oeil.
         <div>
             <button>Télécharger</button>
             <img src={{asset('images/image/button_Available_on_the_App_Store.png')}} alt="app_store" class="appstore">
@@ -183,6 +158,9 @@
     <article>
         <img src={{asset('images/commande.png')}} >
     </article>
+</section>
+
+<section id="fond">
 </section>
 
 <section id="abonnement">
@@ -218,33 +196,5 @@
         <button>Nous Contacter</button>
     </article>
 </section>
-
-<footer>
-    <article>
-        <div>
-            <img src={{asset('images/logo_footer.png')}} alt="app_store" class="appstore">
-        </div>
-        <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Menu</h4>
-            <li>Comment ca marche</li>
-            <li>A propos de nous</li>
-            <li>Contact</li>
-        </ul>
-         <ul>
-            <h4>Newsletters</h4>
-            <form>
-                <input type="text" placeholder="Insérer votre e-mail">
-                <img src={{asset('images/pictogrammes/fleche2.png')}} alt="app_store" class="appstore">
-            </form>
-        </ul>
-    </article>
-</footer>
-
 
 {% endblock %}

@@ -1,15 +1,13 @@
 #contac{
     
     width: 80%;
-    background: none;
     margin: 0 auto;
-    margin-top: 100px;
-  
     display: block;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 70px;
+    
+ 
 
 
     h1{
@@ -31,9 +29,10 @@
 
     article{
         width: 100%;
-        
+        margin-top: 100px;
         background: none;
         float: left;
+        margin-top: 150px;
         
         div{
           width: 100%;
@@ -80,13 +79,13 @@
                 height: 120px;
 
                 input{
-                  width: 95%;
+                  width: 100%;
                   padding:9px;
                   box-shadow: 10px 5px 5px #A9927B;
                   border: none;
                   height: 200px;
                   text-decoration: none;
-                  margin-right: 34px;
+                 
                 }
                 
                
@@ -103,7 +102,7 @@
                   display: block;
                   margin-left: auto;
                   margin-right: auto;
-                  width: 20%;
+                  width: 40%;
                   background: #F26513;
                   padding: 15px;
                   border-radius: 10px;
